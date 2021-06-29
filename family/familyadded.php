@@ -141,7 +141,7 @@ if(isset($_POST['submit'])){
    
     if(empty($data_missing)){
         
-        require_once('../../mysqli_connect.php');
+        require_once('../mysqli_connect.php');
         
         $query = "INSERT INTO family (contact1FirstName,contact1LastName,contact2FirstName,contact2LastName,addressLine1,addressLine2,city,state,zipCode,PrimaryPhone,email,familyID) 
 		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, Null)";

@@ -11,7 +11,7 @@
 <input type="text" name="contact1FirstName" size="30" value="" />
 </p>
 
-<p>Contavt 1 Last Name:
+<p>Contact 1 Last Name:
 <input type="text" name="contact1LastName" size="30" value="" />
 </p>
 
@@ -19,7 +19,7 @@
 <input type="text" name="contact2FirstName" size="30" value="" />
 </p>
 
-<p>Contavt 2 Last Name:
+<p>Contact 2 Last Name:
 <input type="text" name="contact2LastName" size="30" value="" />
 </p>
 
