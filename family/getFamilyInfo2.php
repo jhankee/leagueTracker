@@ -28,7 +28,7 @@
 require_once('../mysqli_connect.php');
 //include "../mysqli_connect.php"; // Using database connection file here
 
-$records = mysqli_query($dbc,"select * from family;"); // fetch data from database
+$records = mysqli_query($dbc,"select * from family order by contact1LastName ;"); // fetch data from database
 
 while($data = mysqli_fetch_array($records))
 {
@@ -46,8 +46,8 @@ while($data = mysqli_fetch_array($records))
 	  <td><?php echo $data['zipCode']; ?></td>
 	  <td><?php echo $data['PrimaryPhone']; ?></td>
 	  <td><?php echo $data['email']; ?></td>
-	<td><a href="editFamilyInfo.php?id=<?php echo $data['familyID']; ?>">Edit</a></td>
-	<td><a href="..\player\add_playerInfo2.php?id=<?php echo $data['familyID']; ?>">Add Player</a></td>
+	  <td><a href="editFamilyInfo.php?id=<?php echo $data['familyID']; ?>">Edit</a></td>
+	  <td><a href="..\player\add_playerInfo2.php?id=<?php echo $data['familyID']; ?>">Add Player</a></td>
   </tr>	
 <?php
 }
