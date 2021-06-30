@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Display all records from Database</title>
+  <title>Display Family records from Database</title>
 </head>
 <body>
 
 <h2>Family Details</h2>
 
+<h3><a href="http://localhost/leagueTracker/family/familyadded.php">Click here to Add New Family</a></h3>
+</br>
 <table border="2">
   <tr>
     <td>Family ID</td>

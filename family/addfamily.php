@@ -1,11 +1,11 @@
 <html>
 <head>
-<title>Add Family</title>
+<title>Add Family Information</title>
 </head>
 <body>
-<form action="http://localhost/leagueTracker/family/familyadded.php" method="post">
+<form action="http://localhost/leagueTracker/familyfamilyadded.php" method="post">
 
-<b>Add a New Family</b>
+<h3><b>Add a New Family </b></h3>
 
 <p>Contact 1 First Name:
 <input type="text" name="contact1FirstName" size="30" value="" />

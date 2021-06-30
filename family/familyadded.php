@@ -78,17 +78,6 @@ if(isset($_POST['submit'])){
         $street1 = trim($_POST['addressLine1']);
 
     }
-	    if(empty($_POST['addressLine2'])){
-
-        // Adds name to array
-        $data_missing[] = 'addressLine2';
-
-    } else {
-
-        // Trim white space from the name and store the name
-        $street2 = trim($_POST['addressLine2']);
-
-    }
 
     if(empty($_POST['city'])){
 
@@ -194,10 +183,13 @@ if(isset($_POST['submit'])){
 
 ?>
 
-<form action="http://localhost/leagueTracker/familyadded.php" method="post">
+<form action="http://localhost/leagueTracker/family/familyadded.php" method="post">
     
-    <b>Add a Family Student</b>
-    
+<h3><b>Add a New Family </b></h3>
+
+<h3><a href="http://localhost/leagueTracker/family/getfamilyInfo2.php">Return to Family Maintanence</a></h3>
+</br>
+
 <p>Contact 1 First Name:
 <input type="text" name="contact1FirstName" size="30" value="" />
 </p>
@@ -211,15 +203,15 @@ if(isset($_POST['submit'])){
 </p>
 
 <p>Contact 2 Last Name:
-<input type="text" name="contact1LastName" size="30" value="" />
+<input type="text" name="contact2LastName" size="30" value="" />
 </p>
 
-<p>Street Line 1:
+<p>Address Line 1:
 <input type="text" name="addressLine1" size="30" value="" />
 </p>
 
-<p>Street Line 1:
-<input type="text" name="addressLine1" size="30" value="" />
+<p>Address Line 2:
+<input type="text" name="addressLine2" size="30" value="" />
 </p>
 
 <p>City:

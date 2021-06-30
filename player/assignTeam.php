@@ -5,7 +5,15 @@ require_once('../mysqli_connect.php');
 $id = $_GET['id']; // get id through query string
 
 $qry = mysqli_query($dbc,"select playerLastName,playerFirstName,registrationDate,teamName from player left join team on player.teamID = team.teamID where playerId='$id' ;"); // select query
-$sql = "select teamName, teamID from team where divisionID = (select divisionId from divisions where startAgeDOB < (select dateOfBirth from player where playerID='$id') and endAgeDOB >(select dateOfBirth from player where playerID='$id')) and teamID NOT IN (select teamID from player group by teamID having count(teamID) >= 12)";    
+
+$sql = "select team.teamName,team.teamID from team
+where divisionID = (select divisionId from division where 
+(date(startAgeDOB) < (select date(dateOfBirth) from player where playerId='$id')
+and date(endAgeDOB) >(select date(dateOfBirth) from player where playerId='$id')))
+and team.teamID not in (select team.teamID from team
+left join player on player.teamID = team.teamID
+group by teamID having count(playerID) >= 12)";
+
 
 $data = mysqli_fetch_array($qry); // fetch data
 

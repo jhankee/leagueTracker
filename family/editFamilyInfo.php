@@ -51,17 +51,39 @@ if(isset($_POST['update'])) // when click on Update button
 
 <form method="POST">
   <p>
-  <p><input type="text" name="contact1FirstName" value="<?php echo $data['contact1FirstName'] ?>" placeholder="Enter Contact 1 First Name" Required></p>
-  <p><input type="text" name="contact1LastName" value="<?php echo $data['contact1LastName'] ?>" placeholder="Enter Contact 1 Last Name" Required></p>
-  <p><input type="text" name="contact2FirstName" value="<?php echo $data['contact2FirstName'] ?>" placeholder="Enter Contact 2 First Name" Required></p>
-  <p><input type="text" name="contact2LastName" value="<?php echo $data['contact2LastName'] ?>" placeholder="Enter Contact 2 Last Name" Required></p>
-  <p><input type="text" name="addressLine1" value="<?php echo $data['addressLine1'] ?>" placeholder="Enter Address Line 1" Required></p>
-  <p><input type="text" name="addressLine2" value="<?php echo $data['addressLine2'] ?>" placeholder="Enter Address Line 2" ></p>
-  <p><input type="text" name="city" value="<?php echo $data['city'] ?>" placeholder="Enter City" Required></p>
-  <p><input type="text" name="state" value="<?php echo $data['state'] ?>" placeholder="Enter State" Required></p>
-  <p><input type="text" name="zipCode" value="<?php echo $data['zipCode'] ?>" placeholder="Enter Zip Code" Required></p>
-  <p><input type="text" name="PrimaryPhone" value="<?php echo $data['PrimaryPhone'] ?>" placeholder="Enter Primary Phone" Required></p>
-  <p><input type="text" name="email" value="<?php echo $data['email'] ?>" placeholder="Enter Email Address" Required></p>
+  <p>
+  Contact 1 First Name:
+  <input type="text" name="contact1FirstName" value="<?php echo $data['contact1FirstName'] ?>" placeholder="Enter Contact 1 First Name" Required></p>
+  <p>
+  Contact 1 Last Name:
+  <input type="text" name="contact1LastName" value="<?php echo $data['contact1LastName'] ?>" placeholder="Enter Contact 1 Last Name" Required></p>
+  <p>
+  Contact 2 First Name:
+  <input type="text" name="contact2FirstName" value="<?php echo $data['contact2FirstName'] ?>" placeholder="Enter Contact 2 First Name" Required></p>
+  <p>
+  Contact 2 Last Name:
+  <input type="text" name="contact2LastName" value="<?php echo $data['contact2LastName'] ?>" placeholder="Enter Contact 2 Last Name" Required></p>
+  <p>
+  Address line 1:
+  <input type="text" name="addressLine1" value="<?php echo $data['addressLine1'] ?>" placeholder="Enter Address Line 1" Required></p>
+  <p>
+  Address Line 2:
+  <input type="text" name="addressLine2" value="<?php echo $data['addressLine2'] ?>" placeholder="Enter Address Line 2" ></p>
+  <p>
+  City:
+  <input type="text" name="city" value="<?php echo $data['city'] ?>" placeholder="Enter City" Required></p>
+  <p>
+  State:
+  <input type="text" name="state" value="<?php echo $data['state'] ?>" placeholder="Enter State" Required></p>
+  <p>
+  Zip Code:
+  <input type="text" name="zipCode" value="<?php echo $data['zipCode'] ?>" placeholder="Enter Zip Code" Required></p>
+  <p>
+  Primary Phone:
+  <input type="text" name="PrimaryPhone" value="<?php echo $data['PrimaryPhone'] ?>" placeholder="Enter Primary Phone" Required></p>
+  <p>
+  Email Address:
+  <input type="text" name="email" value="<?php echo $data['email'] ?>" placeholder="Enter Email Address" Required></p>
 
   
   
