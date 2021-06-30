@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Unpaid Invoices Informatio</title>
+  <title>Unpaid Invoices Information</title>
 </head>
 <body>
 
