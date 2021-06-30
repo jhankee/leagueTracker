@@ -12,11 +12,18 @@ $data = mysqli_fetch_array($qry); // fetch data
 
 if(isset($_POST['update'])) // when click on Update button
 {
-    $playerLastName = $_POST['playerLastName'];
-	$playerFirstName = $_POST['playerFirstName'];
+    $playerLastName = $data['playerLastName'];
+	$playerFirstName = $data['playerFirstName'];
 	$teamID = $_POST['newTeam'];
-
-    $edit = mysqli_query($dbc,"update player set teams_teamID='$teamID' where playerID = $id;");
+	
+	if ($teamID <> 'Null')
+	{
+		$edit = mysqli_query($dbc,"update player set teams_teamID='$teamID' where playerID = $id;");
+	}
+	else
+	{
+		$edit = mysqli_query($dbc,"update player set teams_teamID=null where playerID = $id;");
+	}
 	
     if($edit)
     {
@@ -27,7 +34,8 @@ if(isset($_POST['update'])) // when click on Update button
     else
     {
         echo mysqli_error();
-    }    	
+    } 
+   	
 }
 ?>
 
@@ -39,26 +47,21 @@ if(isset($_POST['update'])) // when click on Update button
 	<p><b>Player First Name : <?php echo $data['playerFirstName'] ?> </b></p>
 	<p><b>Current Team Assignment : <?php echo $data['teamName'] ?> </b></p>
 	
-
 	<?php 
-            
-			
             $result = $dbc->query($sql);
 		
 			if ($result -> num_rows > 0) 
 			{
                 echo "<select name=\"newTeam\">";
-                // output data of each row
 					while ($row = $result->fetch_assoc()) {
                     echo "<option value=\"$row[teamID]\">$row[teamName]</option>";
                 }
+					echo "<option value=\"Null\">UnAssign</option>";
                 echo "</select>";
 			}
 			else {
                 echo "<p class='lead'> No teams available </p>";
             }
-			
-            $dbc->close();
 	?>	
 	</p>	
 	
