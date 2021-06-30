@@ -30,10 +30,8 @@ while($data = mysqli_fetch_array($records))
     <td><?php echo $data['playerFirstName']; ?></td>
 	  <td><?php echo $data['registrationDate']; ?></td>
 	  <td><?php echo $data['teamName']; ?></td>
-	  <!--
-    <td><a href="editFamilyInfo.php?id=<?php echo $data['familyID']; ?>">Edit</a></td>
-    -->
-	  <td><a href="..\player\assignTeam.php?id=<?php echo $data['playerID']; ?>">Assign Team</a></td>
+    <td><a href="..\player\editPlayerInfo.php?id=<?php echo $data['playerID']; ?>">Edit</a></td>
+    <td><a href="..\player\assignTeam.php?id=<?php echo $data['playerID']; ?>">Assign Team</a></td>
     
   </tr>	
 <?php
