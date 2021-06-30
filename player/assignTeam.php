@@ -4,8 +4,8 @@ require_once('../mysqli_connect.php');
 
 $id = $_GET['id']; // get id through query string
 
-$qry = mysqli_query($dbc,"select playerLastName,playerFirstName,registrationDate,teamName from player left join teams on player.teams_teamID = teams.teamID where playerId='$id' ;"); // select query
-$sql = "select teamName, teamID from teams where divisions_divisionID = (select divisionId from divisions where startAgeDOB < (select dateOfBirth from player where playerID='$id') and endAgeDOB >(select dateOfBirth from player where playerID='$id')) and teamID NOT IN (select teams_teamID from player group by teams_teamID having count(teams_teamID) >= 12)";    
+$qry = mysqli_query($dbc,"select playerLastName,playerFirstName,registrationDate,teamName from player left join team on player.teamID = team.teamID where playerId='$id' ;"); // select query
+$sql = "select teamName, teamID from team where divisionID = (select divisionId from divisions where startAgeDOB < (select dateOfBirth from player where playerID='$id') and endAgeDOB >(select dateOfBirth from player where playerID='$id')) and teamID NOT IN (select teamID from player group by teamID having count(teamID) >= 12)";    
 
 $data = mysqli_fetch_array($qry); // fetch data
 
@@ -18,11 +18,11 @@ if(isset($_POST['update'])) // when click on Update button
 	
 	if ($teamID <> 'Null')
 	{
-		$edit = mysqli_query($dbc,"update player set teams_teamID='$teamID' where playerID = $id;");
+		$edit = mysqli_query($dbc,"update player set teamID='$teamID' where playerID = $id;");
 	}
 	else
 	{
-		$edit = mysqli_query($dbc,"update player set teams_teamID=null where playerID = $id;");
+		$edit = mysqli_query($dbc,"update player set teamID=null where playerID = $id;");
 	}
 	
     if($edit)

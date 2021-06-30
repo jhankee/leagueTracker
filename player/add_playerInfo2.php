@@ -12,7 +12,7 @@ if(isset($_POST['update'])) // when click on Update button
 	$dob = $_POST['dob'];
 	$registrationDate = date("Y-m-d");
 
-		$query = "INSERT INTO player (playerFirstName, playerLastName, dateOfBirth, family_familyID, registrationDate) VALUES ( ?, ?, ?, ?, ?)";
+		$query = "INSERT INTO player (playerFirstName, playerLastName, dateOfBirth, familyID, registrationDate) VALUES ( ?, ?, ?, ?, ?)";
     //echo  $playerFirstName, " " , $playerLastName, " ", $dob, " ", $id, " ", $registrationDate;
 	    $stmt = mysqli_prepare($dbc, $query);
         

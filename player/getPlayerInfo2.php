@@ -20,7 +20,7 @@
 require_once('../mysqli_connect.php');
 //include "../mysqli_connect.php"; // Using database connection file here
 
-$records = mysqli_query($dbc,"Select playerID,playerLastName,playerFirstName,registrationDate,teamName from player left join teams on player.teams_teamID = teams.teamID order by playerLastName;"); // fetch data from database
+$records = mysqli_query($dbc,"Select playerID,playerLastName,playerFirstName,registrationDate,teamName from player left join team on player.teamID = team.teamID order by playerLastName;"); // fetch data from database
 
 while($data = mysqli_fetch_array($records))
 {
