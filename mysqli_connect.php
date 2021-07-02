@@ -20,7 +20,7 @@ DELETE : Delete existing rows (Remove privilege if not required)
 DEFINE ('DB_USER', 'leagueAdmin');
 DEFINE ('DB_PASSWORD', 'password1234');
 DEFINE ('DB_HOST', 'localhost');
-DEFINE ('DB_NAME', 'leagueTracker');
+DEFINE ('DB_NAME', 'leaguetracker');
 
 // $dbc will contain a resource link to the database
 // @ keeps the error from showing in the browser
