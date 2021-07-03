@@ -1,2 +1,3 @@
-CREATE USER 'leagueAdmin'@'localhost' IDENTIFIED BY 'password';
-GRANT INSERT, SELECT, DELETE, UPDATE ON leaguetracker.* TO leagueAdmin@localhost;
+CREATE USER leagueAdmin IDENTIFIED BY 'password1234';
+
+GRANT INSERT, SELECT, DELETE, UPDATE ON leaguetracker.* TO leagueAdmin;
