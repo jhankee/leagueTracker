@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <title>Add Family Information</title>
@@ -5,6 +6,7 @@
 <body>
 <form action="http://localhost/leagueTracker/familyfamilyadded.php" method="post">
 
+<div>
 <h3><b>Add a New Family </b></h3>
 
 <p>Contact 1 First Name:
@@ -57,5 +59,7 @@
 </p>
 
 </form>
+</div>
 </body>
 </html>
+
