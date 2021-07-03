@@ -1,0 +1,20 @@
+To restore a database
+1) open run mysql
+	on windows open a command promt
+	change to directory where mysql is installed, in my case C:\xampp\mysql\bin>
+	enter "mysql -u root -p"
+	there is no password, just hit enter
+	create a blank database "create database leaguetracker;"
+	
+	next, exit mysql (type exit & hit enter)
+	copy the backup file to C:\xampp\mysql\bin
+	mysql -u root leaguetracker < leaguetracker_backup_06_30_2021.sql
+	enter "mysql -u root -p"
+	type "use leaguetracker"
+	
+	verify you see the tables and database
+	
+to backup database
+	from C:\xampp\mysql\bin type "mysqldump -u root leaguetracker > leaguetracker_backup.sql" (change the name of the detination file)
+	Just from command prompt not from within mysql
+	
