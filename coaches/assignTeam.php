@@ -4,15 +4,10 @@ require_once('../mysqli_connect.php');
 
 $id = $_GET['id']; // get id through query string
 
-$qry = mysqli_query($dbc,"select playerLastName,playerFirstName,registrationDate,teamName from player left join team on player.teamID = team.teamID where playerId='$id' ;"); // select query
+$qry = mysqli_query($dbc,"select * from coach where coachId='$id' ;"); // select query
 
-$sql = "select team.teamName,team.teamID from team
-where divisionID = (select divisionId from division where 
-(date(startAgeDOB) < (select date(dateOfBirth) from player where playerId='$id')
-and date(endAgeDOB) >(select date(dateOfBirth) from player where playerId='$id')))
-and team.teamID not in (select team.teamID from team
-left join player on player.teamID = team.teamID
-group by teamID having count(playerID) >= 12)";
+$sql = "select teamID, Concat(divisionName,' - ',teamName) as team from team
+join division on team.divisionID = division.divisionID";
 
 
 $data = mysqli_fetch_array($qry); // fetch data
@@ -26,17 +21,17 @@ if(isset($_POST['update'])) // when click on Update button
 	
 	if ($teamID <> 'Null')
 	{
-		$edit = mysqli_query($dbc,"update player set teamID='$teamID' where playerID = $id;");
+		$edit = mysqli_query($dbc,"update coach_has_team set teamID='$teamID' where coachID = $id;");
 	}
 	else
 	{
-		$edit = mysqli_query($dbc,"update player set teamID=null where playerID = $id;");
+		$edit = mysqli_query($dbc,"update coach_has_team set teamID=null where coachID = $id;");
 	}
 	
     if($edit)
     {
         mysqli_close($dbc); // Close connection
-        header("location:getPlayerInfo2.php"); // redirects to all records page
+        header("location:getCoachInfo2.php"); // redirects to all records page
         exit;
     }
     else
@@ -47,13 +42,13 @@ if(isset($_POST['update'])) // when click on Update button
 }
 ?>
 
-<h3>Team Assignment</h3>
+<h3>Coach Team Assignment</h3>
 
 <form method="POST">
   <p>
-	<p><b>Player Last Name : <?php echo $data['playerLastName'] ?> </b></p>
-	<p><b>Player First Name : <?php echo $data['playerFirstName'] ?> </b></p>
-	<p><b>Current Team Assignment : <?php echo $data['teamName'] ?> </b></p>
+	<p><b>Coach Last Name : <?php echo $data['coachLastName'] ?> </b></p>
+	<p><b>Coach First Name : <?php echo $data['coachFirstName'] ?> </b></p>
+	<p><b>Coach Type : <?php echo $data['coachType'] ?> </b></p>
 	
 	<?php 
             $result = $dbc->query($sql);
@@ -62,7 +57,7 @@ if(isset($_POST['update'])) // when click on Update button
 			{
                 echo "<select name=\"newTeam\">";
 					while ($row = $result->fetch_assoc()) {
-                    echo "<option value=\"$row[teamID]\">$row[teamName]</option>";
+                    echo "<option value=\"$row[teamID]\">$row[team]</option>";
                 }
 					echo "<option value=\"Null\">UnAssign</option>";
                 echo "</select>";
