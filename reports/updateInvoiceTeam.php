@@ -37,15 +37,16 @@ if(isset($_POST['update'])) // when click on Update button
 ?>
 
 <h3>Invioce Maintanence</h3>
-
+<h4><a href="http://localhost/leagueTracker/index.html">Return to Main Menu</a></h4>
+</br>
 <form method="POST">
   <p>
 	<p><b>Conatct Last Name : <?php echo $data['contact1FirstName'] ?> </b></p>
 	<p><b>Contact First Name : <?php echo $data['Contact1LastName'] ?> </b></p>
 	<p><b>Amount : <?php echo $data['amount'] ?> </b></p>
 	<select name="paidStatus">
-		<option value="True">Paid</option>
-		<option value="False">Unpaid</option>
+        <option value="False">Unpaid</option>
+        <option value="True">Paid</option>
 	</select>
 	
 	<p><input type="submit" name="update" value="Update"></p>

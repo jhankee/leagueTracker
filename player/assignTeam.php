@@ -60,7 +60,9 @@ if(isset($_POST['update'])) // when click on Update button
 		
 			if ($result -> num_rows > 0) 
 			{
+
                 echo "<select name=\"newTeam\">";
+					echo "<option value=\"none\" selected disabled hidden> Select an Option";
 					while ($row = $result->fetch_assoc()) {
                     echo "<option value=\"$row[teamID]\">$row[teamName]</option>";
                 }

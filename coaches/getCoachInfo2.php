@@ -6,7 +6,8 @@
 <body>
 
 <h2>Coach Details</h2>
-
+<h4><a href="http://localhost/leagueTracker/index.html">Return to Main Menu</a></h4>
+</br>
 <table border="2">
   <tr>
     <td>coachLastName</td>
@@ -31,8 +32,8 @@ while($data = mysqli_fetch_array($records))
     <td><?php echo $data['coachFirstName']; ?></td>
 	  <td><?php echo $data['coachType']; ?></td>
     <td><?php echo $data['hasClearances']; ?></td>
-	  <td><a href="editFamilyInfo.php?id=<?php echo $data['coachID']; ?>">Edit</a></td>
-	  <td><a href="..\player\add_playerInfo2.php?id=<?php echo $data['coachID']; ?>">Add Player</a></td>
+	  <td><a href="editCoachInfo.php?id=<?php echo $data['coachID']; ?>">Edit</a></td>
+	  <td><a href="assignTeam.php?id=<?php echo $data['coachID']; ?>">Assign to Team</a></td>
   </tr>	
 <?php
 }
