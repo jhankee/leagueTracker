@@ -6,7 +6,8 @@
 <body>
 
 <h2>Coaches Missing Clearances</h2>
-
+<h4><a href="http://localhost/leagueTracker/index.html">Return to Main Menu</a></h4>
+</br>
 
 <table border="2">
  <tr>

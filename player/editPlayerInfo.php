@@ -35,7 +35,7 @@ if(isset($_POST['update'])) // when click on Update button
 }
 ?>
 
-<h3>Update Payer Data</h3>
+<h3>Update Player Data</h3>
 
 <form method="POST">
   <p>
