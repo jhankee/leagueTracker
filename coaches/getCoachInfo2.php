@@ -34,6 +34,7 @@ while($data = mysqli_fetch_array($records))
     <td><?php echo $data['hasClearances']; ?></td>
 	  <td><a href="editCoachInfo.php?id=<?php echo $data['coachID']; ?>">Edit</a></td>
 	  <td><a href="assignTeam.php?id=<?php echo $data['coachID']; ?>">Assign to Team</a></td>
+    <td><a href="getCoachAssignment.php?id=<?php echo $data['coachID']; ?>">Current Teams</a></td>
   </tr>	
 <?php
 }

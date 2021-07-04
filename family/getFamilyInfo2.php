@@ -14,8 +14,6 @@
 
   <h3><a href="http://localhost/leagueTracker/index.html">Click Here to Return to Home Page</a></h3>
   </br>
-  <h4><a href="http://localhost/leagueTracker/index.html">Return to Main Menu</a></h4>
-  </br>
   <table class="table table-dark" border="2">
     <tr>
       <td>Family ID</td>

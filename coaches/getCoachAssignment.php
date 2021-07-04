@@ -59,6 +59,7 @@ $result = $dbc->query($sql);
 
 
 </table>
+<h4><a href="assignTeam.php?id=<?php echo $coachInfo['coachID']; ?>">Assign to Team</a></h4>
 
 </body>
 </html>
