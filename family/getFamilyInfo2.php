@@ -11,6 +11,8 @@
 
   <h3><a href="http://localhost/leagueTracker/family/familyadded.php">Click here to Add New Family</a></h3>
   </br>
+  <h4><a href="http://localhost/leagueTracker/index.html">Return to Main Menu</a></h4>
+  </br>
   <table class="table table-dark" border="2">
     <tr>
       <td>Family ID</td>
