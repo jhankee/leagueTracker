@@ -62,8 +62,8 @@ if(isset($_POST['update'])) // when click on Update button
 	<p><b>Contact First Name : <?php echo $data['Contact1LastName'] ?> </b></p>
 	<p><b>Amount : <?php echo $data['amount'] ?> </b></p>
 	<select name="paidStatus">
-        <option value="False">Unpaid</option>
-        <option value="True">Paid</option>
+		<option value="True">Paid</option>
+		<option value="False">Unpaid</option>
 	</select>
 	
 	<p><input class="bg-success" type="submit" name="update" value="Update"></p>

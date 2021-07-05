@@ -34,11 +34,30 @@ if(isset($_POST['update'])) // when click on Update button
 }
 ?>
 
-<h3>Update Division Data</h3>
+
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="../styless.css">
+
+<title>Update Division Data</title>
+</head>
+<body>
+
+<div style="text-align:center" class="form-group d-flex justify-content-center"> 
+<div class="row">
+<div class="col-2"></div>
+<div class="col-8">
+
+<div class="row d-flex justify-content-center">
+                <h3><b>Update Division Data</b></h3>
+</div>
+
+<!-- <h3>Update Division Data</h3> -->
 
 
 <form method="POST">
-  <p>
+  <!-- <p>
   <p>
   Division Name:
   <input type="text" name="divisionName" value="<?php echo $data['divisionName'] ?>" placeholder="Enter Contact 1 First Name" Required></p>
@@ -54,5 +73,21 @@ if(isset($_POST['update'])) // when click on Update button
   <p>
   
   
-  <p><input type="submit" name="update" value="Update"></p>
+  <p><input type="submit" name="update" value="Update"></p> -->
+
+  <label>Division Name:*:<input class="form-control" type="text" name="divisionName" size="30" value="<?php echo $data['divisionName'] ?>" placeholder="Player First Name*" required/></label>
+  <label>Oldest Player DOB:*:<input class="form-control" type="date" name="startAgeDOB" size="30" value="<?php echo $data['startAgeDOB'] ?>" placeholder="" required/></label>
+  <label>Youngest PLayer DOB:*:<input class="form-control" type="date" name="endAgeDOB" size="50" value="<?php echo $data['endAgeDOB'] ?>" placeholder="" required/></label>
+  <label>Cost:*:<input class="form-control" type="text" name="cost" size="30" value="<?php echo $data['cost'] ?>" placeholder="cost" required/></label>
+  </div>
+</div>
+</div>
+<div class="row">     
+                <div class="col-6"></div>           
+                <p class="padding-top-15">
+                    <input class="bg-success" type="submit" name="update" value="Update" />
+                </p>
+            </div>
+
+
 </form>

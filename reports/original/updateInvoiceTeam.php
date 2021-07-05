@@ -36,26 +36,9 @@ if(isset($_POST['update'])) // when click on Update button
 }
 ?>
 
-<html>
-<head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="../styless.css">
-
-<title>Invoice Maintanence</title>
-</head>
-<body>
-
-<div style="text-align:center" class="form-group d-flex justify-content-center"> 
-<div class="row">
-<div class="col-2"></div>
-<div class="col-12">
-
-<div class="row d-flex justify-content-center">
-                <h3><b>Invoice Maintanence</b></h3>
-</div>
-
-<!-- <h3>Invioce Maintanence</h3> -->
-
+<h3>Invioce Maintanence</h3>
+<h4><a href="http://localhost/leagueTracker/index.html">Return to Main Menu</a></h4>
+</br>
 <form method="POST">
   <p>
 	<p><b>Conatct Last Name : <?php echo $data['contact1FirstName'] ?> </b></p>
@@ -66,5 +49,5 @@ if(isset($_POST['update'])) // when click on Update button
         <option value="True">Paid</option>
 	</select>
 	
-	<p><input class="bg-success" type="submit" name="update" value="Update"></p>
+	<p><input type="submit" name="update" value="Update"></p>
 </form>
