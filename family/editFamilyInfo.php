@@ -142,7 +142,7 @@ if(isset($_POST['update'])) // when click on Update button
   <div class="row submit">     
                 <div class="col-6"></div>           
                 <p class="padding-top-15">
-                    <input class="bg-success" type="submit" name="submit" value="Add Family" />
+                    <input class="bg-success" type="submit" name="update" value="Update" />
                 </p>
             </div>
 </form>

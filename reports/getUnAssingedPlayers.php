@@ -2,13 +2,20 @@
 <html>
 <head>
   <title>Unassigned Players</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
 
-<h2>Unassigned Players</h2>
+<div style="text-align:center">
+  <h2 style="text-align:center">Unassigned Players</h2>
+
+  <h3><a href="http://localhost/leagueTracker/index.html">Click Here to Return to Home Page</a></h3>
+</br>
+
+<!-- <h2>Unassigned Players</h2> -->
 
 
-<table border="2">
+<table class="table table-dark" border="2">
  <tr>
     <td>Player First Name </td>
     <td>Player Last Name</td>

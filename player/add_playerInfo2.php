@@ -39,19 +39,60 @@ if(isset($_POST['update'])) // when click on Update button
 }
 ?>
 
-<h3>Enter Player Information</h3>
+
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="../styless.css">
+
+<title>Add Family</title>
+</head>
+<body>
+
+<div style="text-align:center" class="form-group d-flex justify-content-center"> 
+<div class="row">
+<div class="col-2"></div>
+<div class="col-8">
+
+<div class="row d-flex justify-content-center">
+                <h3><b>Enter Player Information</b></h3>
+</div>
 
 <form method="POST">
-  <p>
-  <p>
+  <!-- <p> -->
+  <!-- <p>
   Player First Name:
   <input type="text" name="playerFirstName" value="" Required></p>
-  <p>
-  Player Last Name:
+  <p> -->
+  <!-- Player Last Name:
   <input type="text" name="playerLastName" value="" Required></p>
-  <p>
-  Player Date of Birth:
-  <input type="date" name="dob" value="" Required></p>
+  <p> -->
+  <!-- Player Date of Birth:
+  <input type="date" name="dob" value="" Required></p> -->
     
-  <p><input type="submit" name="update" value="Update"></p>
+  <!-- <p><input type="submit" name="update" value="Update"></p> -->
+
+  <label>Player First Name:*:<input class="form-control" type="text" name="playerFirstName" size="30" value="" placeholder="Player First Name*" required/></label>
+
+  <label>Player Last Name*:*:<input class="form-control" type="text" name="playerLastName" size="30" value="" placeholder="Player Last Name*" required/></label>
+
+  <label>Player Date of Birth*:<input class="form-control" type="date" name="dob" size="30" value="" required/></label>
+  </div>
+</div>
+</div>
+<div class="row">     
+                <div class="col-6"></div>           
+                <p class="padding-top-15">
+                    <input class="bg-success" type="submit" name="update" value="Update" />
+                </p>
+            </div>
+
+
 </form>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>

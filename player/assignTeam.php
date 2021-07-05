@@ -47,7 +47,25 @@ if(isset($_POST['update'])) // when click on Update button
 }
 ?>
 
-<h3>Team Assignment</h3>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="../styless.css">
+
+<title>Team Assignment</title>
+</head>
+<body>
+
+<div style="text-align:center" class="form-group d-flex justify-content-center"> 
+<div class="row">
+<div class="col-2"></div>
+<div class="col-12">
+
+<div class="row d-flex justify-content-center">
+                <h3><b>Team Assignment</b></h3>
+</div>
+
+<!-- <h3>Team Assignment</h3> -->
 
 <form method="POST">
   <p>
@@ -73,5 +91,5 @@ if(isset($_POST['update'])) // when click on Update button
 	?>	
 	</p>	
 	
-	<p><input type="submit" name="update" value="Update"></p>
+	<p><input class="bg-success" type="submit" name="update" value="Update"></p>
 </form>

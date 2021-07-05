@@ -36,14 +36,46 @@ if(isset($_POST['update'])) // when click on Update button
 }
 ?>
 
-<h3>Enter New Team Name</h3>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="../styless.css">
+
+<title>New Team</title>
+</head>
+<body>
+
+<div style="text-align:center" class="form-group d-flex justify-content-center"> 
+<div class="row">
+<div class="col-2"></div>
+<div class="col-9">
+
+<div class="row d-flex justify-content-center">
+                <h3><b>Enter New Team Name</b></h3>
+</div>
+
+<!-- <h3>Enter New Team Name</h3> -->
 
 <form method="POST">
-  <p>
+  <!-- <p>
   <p>
   Enter New Team Name:
   <input type="text" name="teamName" value="" Required></p>
 
     
-  <p><input type="submit" name="update" value="Update"></p>
+  <p><input type="submit" name="update" value="Update"></p> -->
+
+
+  <label>New Team Name:*:<input class="form-control" type="text" name="teamName" size="30" value="" placeholder="New Team Name*:" required/></label>
+  </div>
+</div>
+</div>
+<div class="row">     
+                <div class="col-6"></div>           
+                <p class="padding-top-15">
+                    <input class="bg-success" type="submit" name="update" value="Update" />
+                </p>
+            </div>
+
+
 </form>

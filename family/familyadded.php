@@ -211,11 +211,11 @@ if(isset($_POST['submit'])){
                 <!-- </p> -->
 
                 <!-- <p>Contact 2 First Name: -->
-                <label>Contact 2 First Name:<input type="text" class="form-control" name="contact2FirstName" size="30" value="" placeholder="Contact 2 First Name" /></label>
+                <label>Contact 2 First Name:<input type="text" class="form-control" name="contact2FirstName" size="30" value="" placeholder="Contact 2 First Name" required/></label>
                 <!-- </p> -->
 
                 <!-- <p>Contact 2 Last Name: -->
-                <label>Contact 2 Last Name:<input type="text" class="form-control" name="contact2LastName" size="30" value="" placeholder="Contact 2 Last Name" /></label>
+                <label>Contact 2 Last Name:<input type="text" class="form-control" name="contact2LastName" size="30" value="" placeholder="Contact 2 Last Name" required/></label>
                 <!-- </p> -->
 
                 <!-- <p>Address Line 1: -->

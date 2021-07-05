@@ -2,13 +2,20 @@
 <html>
 <head>
   <title>Unpaid Invoices Information</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
 
-<h2>Unpaid Invoices Information</h2>
+<div style="text-align:center">
+  <h2 style="text-align:center">Unpaid Invoices Information</h2>
+
+  <h3><a href="http://localhost/leagueTracker/index.html">Click Here to Return to Home Page</a></h3>
+</br>
+
+<!-- <h2>Unpaid Invoices Information</h2> -->
 
 
-<table border="2">
+<table class="table table-dark" border="2">
  <tr>
     <td>Contact First Name </td>
     <td>Contact Last Name</td>

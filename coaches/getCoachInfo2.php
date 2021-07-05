@@ -2,12 +2,18 @@
 <html>
 <head>
   <title>Display Coach records from Database</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
 
-<h2>Coach Details</h2>
+<div style="text-align:center">
+  <h2 style="text-align:center">Coach Details</h2>
+<!-- <h2>Coach Details</h2> -->
 
-<table border="2">
+<h3><a href="http://localhost/leagueTracker/index.html">Click Here to Return to Home Page</a></h3>
+  </br>
+
+<table class="table table-dark" border="2">
   <tr>
     <td>coachLastName</td>
     <td>coachFirstName</td>
@@ -39,5 +45,6 @@ while($data = mysqli_fetch_array($records))
 ?>
 </table>
 
+</div>
 </body>
 </html>
