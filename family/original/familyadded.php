@@ -1,7 +1,6 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="../styless.css">
 
 <title>Add Family</title>
 </head>
@@ -200,59 +199,53 @@ if(isset($_POST['submit'])){
             <h3><a href="http://localhost/leagueTracker/family/getfamilyInfo2.php">Return to Family Maintanence</a></h3>
                 </br>
             </div>
-            <div class="row d-flex justify-content-center">
+            <div class="row d-flex justify-content-center"">
                 <!-- <p>Contact 1 First Name: -->
-                <label>Contact 1 First Name*:<input class="form-control" type="text" name="contact1FirstName" size="30" value="" placeholder="Contact 1 First Name*" required/></label>
+                <label>Contact 1 First Name:<input class="form-control" type="text" name="contact1FirstName" size="30" value="" placeholder="Contact 1 First Name" /></label>
                 
                 <!-- </p> -->
 
                 <!-- <p>Contact 1 Last Name: -->
-                <label>Contact 1 Last Name*:<input class="form-control" type="text" name="contact1LastName" size="30" value="" placeholder="Contact 1 Last Name*" required/></label>
+                <label>Contact 1 Last Name:<input class="form-control" type="text" name="contact1LastName" size="30" value="" placeholder="Contact 1 Last Name" /></label>
                 <!-- </p> -->
 
                 <!-- <p>Contact 2 First Name: -->
-                <label>Contact 2 First Name:<input type="text" class="form-control" name="contact2FirstName" size="30" value="" placeholder="Contact 2 First Name" required/></label>
+                <label>Contact 2 First Name:<input type="text" class="form-control" name="contact2FirstName" size="30" value="" placeholder="Contact 2 First Name" /></label>
                 <!-- </p> -->
 
                 <!-- <p>Contact 2 Last Name: -->
-                <label>Contact 2 Last Name:<input type="text" class="form-control" name="contact2LastName" size="30" value="" placeholder="Contact 2 Last Name" required/></label>
+                <label>Contact 2 Last Name:<input type="text" class="form-control" name="contact2LastName" size="30" value="" placeholder="Contact 2 Last Name" /></label>
                 <!-- </p> -->
 
                 <!-- <p>Address Line 1: -->
-                <label>Address Line 1*:<input type="text" class="form-control" name="addressLine1" size="30" value="" placeholder="Address Line 1" required/></label>
+                <label>Address Line 1:<input type="text" class="form-control" name="addressLine1" size="30" value="" placeholder="Address Line 1" /></label>
                 <!-- </p> -->
 
                 <!-- <p>Address Line 2: -->
-                <label>Address Line 2:<input type="text" class="form-control" name="addressLine2" size="30" value="" placeholder="Address Line 2" /></label>
+                <label>Address Line 2:<input type="text" class="form-control" name="addressLine2" size="30" value="" placeholder="Address Line 1" /></label>
                 <!-- </p> -->
 
                 <!-- <p>City: -->
-                <label>City*:<input type="text" class="form-control" name="city" size="30" value="" placeholder="City" required/></label>
+                <label>City:<input type="text" class="form-control" name="city" size="30" value="" placeholder="City" /></label>
                 <!-- </p> -->
 
                 <!-- <p>State (2 Characters): -->
-                <label>State (2 Characters)*:<input type="text" class="form-control" name="state" size="30" maxlength="2" value="" placeholder="State (2 Characters)" required/></label>
+                <label>State (2 Characters):<input type="text" class="form-control" name="state" size="30" maxlength="2" value="" placeholder="State (2 Characters)" /></label>
                 <!-- </p> -->
 
                 <!-- <p>Zip Code: -->
-                <label>Zip Code*:<input type="text" class="form-control" name="zipCode" size="30" maxlength="5" value="" placeholder="Zip Code" required/></label>
+                <label>Zip Code:<input type="text" class="form-control" name="zipCode" size="30" maxlength="5" value="" placeholder="Zip Code" /></label>
                 <!-- </p> -->
 
                 <!-- <p>Phone Number: -->
-                <label>Phone Number*:<input type="text" class="form-control" name="PrimaryPhone" size="30" value="" placeholder="Phone Number" required/></label>
+                <label>Phone Number:<input type="text" class="form-control" name="PrimaryPhone" size="30" value="" placeholder="Phone Number" /></label>
                 <!-- </p> -->
 
                 <!-- <p>Email: -->
-                <label>Email*:<input type="text" class="form-control" name="email" size="30" value="" placeholder="Email" required/></label>
+                <label>Email:<input type="text" class="form-control" name="email" size="30" value="" placeholder="Phone Number" /></label>
                 <!-- </p> -->
 
-                <!-- <p class="padding-top-15">
-                    <input class="bg-success" type="submit" name="submit" value="Add Family" />
-                </p> -->
-            </div>
-            <div class="row">     
-                <div class="col-6"></div>           
-                <p class="padding-top-15">
+                <p>
                     <input class="bg-success" type="submit" name="submit" value="Add Family" />
                 </p>
             </div>

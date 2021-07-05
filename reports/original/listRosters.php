@@ -2,20 +2,14 @@
 <html>
 <head>
   <title>Full Roster Listing</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
 
-<div style="text-align:center">
-  <h2 style="text-align:center">Full Roster Listing</h2>
-
-  <h3><a href="http://localhost/leagueTracker/index.html">Click Here to Return to Home Page</a></h3>
+<h2>Full Roster Listing</h2>
+<h4><a href="http://localhost/leagueTracker/index.html">Return to Main Menu</a></h4>
 </br>
 
-<!-- <h2>Full Roster Listing</h2> -->
-
-
-<table class="table table-dark" border="2">
+<table border="2">
  <tr>
     <td>Division Name</td>
     <td>Team Name</td>
