@@ -25,7 +25,7 @@ if(isset($_POST['update'])) // when click on Update button
 		        
         mysqli_stmt_execute($stmt);
 
-        if($stmt)
+        if(mysqli_stmt_affected_rows($stmt) == 1)
         {
             mysqli_close($dbc); // Close connection
             header("location:getPlayerInfo2.php"); // redirects to all records page
@@ -33,7 +33,7 @@ if(isset($_POST['update'])) // when click on Update button
         }
         else
         {
-            echo mysqli_error();
+            echo "Error: ", mysqli_stmt_error($stmt);
         } 
 	  	
 }
