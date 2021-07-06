@@ -27,7 +27,7 @@
 require_once('../mysqli_connect.php');
 //include "../mysqli_connect.php"; // Using database connection file here
 
-$records = mysqli_query($dbc,"select * from v_All_rosters;"); // fetch data from database
+$records = mysqli_query($dbc,"select * from v_all_rosters;"); // fetch data from database
 
 while($data = mysqli_fetch_array($records))
 {
