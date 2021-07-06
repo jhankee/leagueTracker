@@ -19,7 +19,8 @@ DELETE : Delete existing rows (Remove privilege if not required)
 // Defined as constants so that they can't be changed
 DEFINE ('DB_USER', 'leagueAdmin');
 DEFINE ('DB_PASSWORD', 'password');
-DEFINE ('DB_HOST', 'localhost');
+//DEFINE ('DB_HOST', 'localhost');
+DEFINE ('DB_HOST', 'sju-csc621-db.cwezplxtfcp4.us-east-2.rds.amazonaws.com');
 DEFINE ('DB_NAME', 'leaguetracker');
 
 // $dbc will contain a resource link to the database
