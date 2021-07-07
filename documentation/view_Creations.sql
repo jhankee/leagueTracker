@@ -5,7 +5,7 @@ concat(player.playerLastName,', ',player.playerFirstName) AS 'Player Name'
 from ((player join team on((player.teamID = team.teamID))) 
 join division on((team.divisionID = division.divisionID))) 
 order by division.divisionName,team.teamName;
-<<<<<<< HEAD
+
 
 =======
 ---------------------
@@ -24,7 +24,6 @@ from (((team join coach_has_team on((team.teamID = coach_has_team.teamID)))
 join coach on((coach_has_team.coachID = coach.coachID))) 
 join division on((team.divisionID = division.divisionID))) 
 order by division.divisionName,team.teamName;
-<<<<<<< HEAD
 
 
 =======
