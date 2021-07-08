@@ -3,7 +3,7 @@
 // Get a connection for the database
 require_once('../mysqli_connect.php');
 
-$cid = $_GET['pid']; // get id through query string
+$pid = $_GET['id']; // get id through query string
 
 $sql = "delete from player where playerID = '$pid';"; 
 

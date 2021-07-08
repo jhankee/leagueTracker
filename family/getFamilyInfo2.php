@@ -55,7 +55,7 @@
       <td><?php echo $data['email']; ?></td>
       <td><a href="editFamilyInfo.php?id=<?php echo $data['familyID']; ?>">Edit</a></td>
       <td><a href="..\player\add_playerInfo2.php?id=<?php echo $data['familyID']; ?>">Add Player</a></td>
-      <td><a href="deleteFamily.php?id=id=<?php echo $data['familyID']; ?>">Delete Family</a></td>
+      <td><a href="deleteFamily.php?id=<?php echo $data['familyID']; ?>">Delete Family</a></td>
     </tr>	
   <?php
   }

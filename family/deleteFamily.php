@@ -3,12 +3,13 @@
 // Get a connection for the database
 require_once('../mysqli_connect.php');
 
-$cid = $_GET['fid']; // get id through query string
+$fid = $_GET['id']; // get id through query string
 
 $sql = "delete from family where familyID = '$fid';"; 
 
 
 $del = mysqli_query($dbc,$sql); // delete query
+$errorMsg = mysqli_error($dbc);
 
 if($del)
 {
@@ -19,6 +20,6 @@ if($del)
 }
 else
 {
-    echo "Error deleting record"; // display error message if not delete
+    echo $errorMsg;
 }
 ?>
