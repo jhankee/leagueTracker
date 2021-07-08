@@ -38,6 +38,7 @@ while($data = mysqli_fetch_array($records))
 	  <td><?php echo $data['teamName']; ?></td>
     <td><a href="..\player\editPlayerInfo.php?id=<?php echo $data['playerID']; ?>">Edit</a></td>
     <td><a href="..\player\assignTeam.php?id=<?php echo $data['playerID']; ?>">Assign Team</a></td>
+    <td><a href="deletePLayer.php?id=id=<?php echo $data['playerID']; ?>">Delete Player</a></td>
     
   </tr>	
 <?php

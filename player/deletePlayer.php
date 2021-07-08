@@ -3,11 +3,9 @@
 // Get a connection for the database
 require_once('../mysqli_connect.php');
 
-$cid = $_GET['cid']; // get id through query string
-$tid = $_GET['tid']; // get id through query string
+$cid = $_GET['pid']; // get id through query string
 
-
-$sql = "delete from coach_has_team where teamid = '$tid' AND coachID = '$cid';"; 
+$sql = "delete from player where playerID = '$pid';"; 
 
 
 $del = mysqli_query($dbc,$sql); // delete query
@@ -16,7 +14,7 @@ if($del)
 {
     echo "Success deleting record";
     mysqli_close($dbc); // Close connection
-    header("location:getCoachAssignment.php?id=$cid"); // redirects to all records page
+    header("location:getFamilyInfo2.php"); // redirects to all records page
     exit;	
 }
 else

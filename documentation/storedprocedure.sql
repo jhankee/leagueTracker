@@ -9,7 +9,7 @@ begin
 END //
 DELIMITER ;
 
--- https://aws.amazon.com/premiumsupport/knowledge-center/rds-mysql-functions/
+------------------------------------------------
 
 DELIMITER //
 CREATE TRIGGER after_insert_player
@@ -20,8 +20,8 @@ BEGIN
 END //   
 DELIMITER ;
 
+------------------------------------------------
 -- insert into player (playerFirstName, playerLastName, dateOfBirth, familyID, registrationDate) VALUES  ('Daniel','Lopez','2015-04-12','23','2006-06-26');
-
 
 DELIMITER //
 CREATE TRIGGER dob_validation
@@ -38,3 +38,42 @@ BEGIN
         end if;
 END //
 DELIMITER ;
+------------------------------------------------
+DELIMITER //
+CREATE TRIGGER dob_validation_update
+BEFORE UPDATE ON player FOR EACH ROW
+BEGIN
+    declare errorMessage varChar(55);
+    Set errorMessage = 'Player\'s age is outside of the divisions offered';
+        if (new.dateOfBirth > (select max(endAgeDOB) from division))
+        or
+        (new.dateOfBirth < (select min(startAgeDOB) from division))
+            then
+            SIGNAL SQLSTATE '45000'
+                SET Message_Text = errorMessage;
+        end if;
+END //
+DELIMITER ;
+------------------------------------------------
+-- drop trigger check_invoice_before_delete;
+------------------------------------------------
+drop trigger check_invoice_before_delete;
+DELIMITER //
+CREATE TRIGGER check_invoice_before_delete
+BEFORE DELETE ON family FOR EACH ROW
+BEGIN
+    declare errorMessage varChar(55);
+	declare rowcount INT;
+    Set errorMessage = 'ERROR:Cannot Delete-Family has unpaid Invoice';
+	select count(invoiceID) into rowcount
+		from invoice
+		where paidStatus = 'False' and familyID = OLD.familyID;
+	if rowcount > 0 THEN
+        SIGNAL SQLSTATE '45000'
+        SET Message_Text = errorMessage;
+    end if;
+END //
+DELIMITER ;
+
+
+

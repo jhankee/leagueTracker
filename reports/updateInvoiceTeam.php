@@ -6,9 +6,9 @@ require_once('../mysqli_connect.php');
 $id = $_GET['id']; // get id through query string
 
 $qry = mysqli_query($dbc,
-"Select invoiceID,contact1FirstName,Contact1LastName,paidStatus, amount 
+"Select invoiceID,contact1FirstName,Contact1LastName,paidStatus, sum(amount)
 from family join invoice on invoice.familyID = family.familyID 
-where invoice.paidStatus = 'False' and invoiceID='$id' ;"); // select query
+where invoice.paidStatus = 'False' and invoiceID='$id' group By family.familyID;"); // select query
 
 $data = mysqli_fetch_array($qry); // fetch data
 
