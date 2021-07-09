@@ -28,7 +28,8 @@
 require_once('../mysqli_connect.php');
 //include "../mysqli_connect.php"; // Using database connection file here
 
-$records = mysqli_query($dbc,"Select invoiceID,contact1FirstName,Contact1LastName,paidStatus, sum(amount)as amount
+$records = mysqli_query($dbc,"Select invoiceID,contact1FirstName,
+Contact1LastName,paidStatus, sum(amount)as amount
 from family 
 join invoice on invoice.familyID = family.familyID 
 where invoice.paidStatus = 'False'
