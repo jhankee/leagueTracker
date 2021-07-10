@@ -1,0 +1,55 @@
+ Directory of C:\wamp64\www\leagueTracker
+
+07/05/2021  10:07 PM             1,092 mysqli_connect.php
+               1 File(s)          1,092 bytes
+
+ Directory of C:\wamp64\www\leagueTracker\coaches
+
+07/04/2021  06:02 PM             1,936 assignTeam.php
+07/07/2021  09:34 AM               624 deleteTeamAssignment.php
+07/04/2021  06:02 PM             1,805 editCoachInfo.php
+07/08/2021  01:23 PM             2,037 getCoachAssignment.php
+07/05/2021  12:11 PM             1,486 getCoachInfo2.php
+               5 File(s)          7,888 bytes
+
+ Directory of C:\wamp64\www\leagueTracker\division
+
+07/05/2021  12:11 PM             3,316 editDivisionInfo.php
+07/05/2021  12:11 PM             1,392 getDivisionInfo2.php
+               2 File(s)          4,708 bytes
+
+ Directory of C:\wamp64\www\leagueTracker\family
+
+07/05/2021  10:51 AM             1,259 addfamily.php
+07/08/2021  01:35 PM               509 deleteFamily.php
+07/05/2021  12:11 PM             6,573 editFamilyInfo.php
+07/05/2021  12:11 PM             8,380 familyadded.php
+07/08/2021  01:21 PM             2,287 getFamilyInfo2.php
+               5 File(s)         19,008 bytes
+
+ Directory of C:\wamp64\www\leagueTracker\player
+
+07/06/2021  04:12 PM             3,095 add_playerInfo2.php
+07/05/2021  12:11 PM             3,032 assignTeam.php
+07/08/2021  01:22 PM               529 deletePlayer.php
+07/05/2021  12:11 PM             2,968 editPlayerInfo.php
+07/08/2021  01:25 PM             1,624 getPlayerInfo2.php
+               5 File(s)         11,248 bytes
+
+Directory of C:\wamp64\www\leagueTracker\reports
+
+07/05/2021  12:11 PM             1,220 getUnAssingedPlayers.php
+07/09/2021  03:24 PM             1,511 getUnpaidinvoices.php
+07/05/2021  10:01 PM             1,150 listCoachesMissingClearances.php
+07/05/2021  09:55 PM             1,096 listRosters.php
+07/09/2021  01:18 PM             1,150 listTeamCoaches.php
+07/09/2021  01:14 PM             1,037 listTeamsByRosterSize.php
+07/07/2021  11:03 AM             2,196 updateInvoiceTeam.php
+               7 File(s)          9,360 bytes
+
+ Directory of C:\wamp64\www\leagueTracker\team
+
+07/05/2021  12:11 PM             2,165 add_teamInfo2.php
+07/05/2021  12:11 PM             1,562 getTeamInfo2.php
+               2 File(s)          3,727 bytes
+
