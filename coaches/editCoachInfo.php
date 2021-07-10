@@ -48,7 +48,7 @@ if(isset($_POST['update'])) // when click on Update button
   Coach Last Name:
   <input type="text" name="coachLastName" value="<?php echo $data['coachLastName'] ?>" Required></p>
   <p>
-  Coach type:*:
+  Coach Type:
   <select name="coachType">
             <option value="Manager">Manager</option>
             <option value="Assistant">Assistant</option>

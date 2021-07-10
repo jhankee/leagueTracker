@@ -19,7 +19,9 @@ if(isset($_POST['update'])) // when click on Update button
 	dateOfBirth='$dob'
 	where playerId ='$id';");
 	
-    echo "update player set playerFirstName='$playerFirstName',playerLastName='$playerLastName',	dateOfBirth='$dob',	where playerId ='$id';";
+    //echo "update player set playerFirstName='$playerFirstName',playerLastName='$playerLastName',	dateOfBirth='$dob',	where playerId ='$id';";
+    $errorMsg = mysqli_error($dbc);
+
 
 
     if($edit)
@@ -30,7 +32,7 @@ if(isset($_POST['update'])) // when click on Update button
     }
     else
     {
-        echo mysqli_error();
+        echo $errorMsg;
     }    	
 }
 ?>
