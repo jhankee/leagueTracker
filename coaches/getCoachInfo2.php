@@ -17,10 +17,10 @@
 
 <table class="table table-dark" border="2">
   <tr>
-    <td>coachLastName</td>
-    <td>coachFirstName</td>
-    <td>coachType</td>
-	  <td>hasClearances</td>
+    <td>Coach Last Name</td>
+    <td>Coach First Name</td>
+    <td>Coach Type</td>
+	  <td>has Coaching Clearances</td>
   </tr>
 
 <?php

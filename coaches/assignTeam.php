@@ -32,7 +32,7 @@ if(isset($_POST['update'])) // when click on Update button
     if($edit)
     {
         mysqli_close($dbc); // Close connection
-        header("location:getCoachInfo2.php"); // redirects to all records page
+        header("location:getCoachAssignment.php?id=$id"); // redirects to all records page
         exit;
     }
     else
