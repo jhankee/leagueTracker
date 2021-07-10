@@ -14,7 +14,7 @@ if($del)
 {
     echo "Success deleting record";
     mysqli_close($dbc); // Close connection
-    header("location:getFamilyInfo2.php"); // redirects to all records page
+    header("location:getPlayerInfo2.php"); // redirects to all records page
     exit;	
 }
 else

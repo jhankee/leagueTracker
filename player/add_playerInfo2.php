@@ -45,7 +45,7 @@ if(isset($_POST['update'])) // when click on Update button
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="../styless.css">
 
-<title>Add Family</title>
+<title>Add Player</title>
 </head>
 <body>
 
@@ -83,7 +83,7 @@ if(isset($_POST['update'])) // when click on Update button
 <div class="row">     
                 <div class="col-6"></div>           
                 <p class="padding-top-15">
-                    <input class="bg-success" type="submit" name="update" value="Update" />
+                    <input class="bg-success" type="submit" name="update" value="Add" />
                 </p>
             </div>
 

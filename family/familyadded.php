@@ -145,7 +145,7 @@ if(isset($_POST['submit'])){
         //b Blobs
         //s Everything Else
         
-        mysqli_stmt_bind_param($stmt, "ssssssssssi", $c1f_name, $c1l_name, $c2f_name, $c2l_name, $street1, $street2, $city, $state, $zip, $phone, $email);
+        mysqli_stmt_bind_param($stmt, "sssssssssis", $c1f_name, $c1l_name, $c2f_name, $c2l_name, $street1, $street2, $city, $state, $zip, $phone, $email);
         
         mysqli_stmt_execute($stmt);
         

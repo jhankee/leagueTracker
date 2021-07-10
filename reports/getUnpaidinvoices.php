@@ -29,11 +29,12 @@ require_once('../mysqli_connect.php');
 //include "../mysqli_connect.php"; // Using database connection file here
 
 $records = mysqli_query($dbc,"Select invoiceID,contact1FirstName,
-Contact1LastName,paidStatus, sum(amount)as amount
+Contact1LastName,paidStatus, sum(amount)as amount, family.familyID as familyID
 from family 
 join invoice on invoice.familyID = family.familyID 
 where invoice.paidStatus = 'False'
-group by family.familyID;"); // fetch data from database
+group by family.familyID
+order by Contact1LastName;"); // fetch data from database
 
 while($data = mysqli_fetch_array($records))
 {
@@ -43,7 +44,7 @@ while($data = mysqli_fetch_array($records))
     <td><?php echo $data['Contact1LastName']; ?></td>
 	  <td><?php echo $data['paidStatus']; ?></td>
     <td><?php echo $data['amount']; ?></td>
-	  <td><a href="updateInvoiceTeam.php?id=<?php echo $data['invoiceID']; ?>">Update Paid Status</a></td>
+	  <td><a href="updateInvoiceTeam.php?id=<?php echo $data['familyID']; ?>">Update Paid Status</a></td>
   </tr>	
 <?php
 }

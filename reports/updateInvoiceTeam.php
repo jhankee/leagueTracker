@@ -6,9 +6,9 @@ require_once('../mysqli_connect.php');
 $id = $_GET['id']; // get id through query string
 
 $qry = mysqli_query($dbc,
-"Select invoiceID,contact1FirstName,Contact1LastName,paidStatus, sum(amount)
+"Select invoiceID,contact1FirstName,Contact1LastName,paidStatus, sum(amount) as amount
 from family join invoice on invoice.familyID = family.familyID 
-where invoice.paidStatus = 'False' and invoiceID='$id' group By family.familyID;"); // select query
+where invoice.paidStatus = 'False' and invoice.familyID ='$id' group By family.familyID;"); // select query
 
 $data = mysqli_fetch_array($qry); // fetch data
 
@@ -19,7 +19,7 @@ if(isset($_POST['update'])) // when click on Update button
 	$Contact1LastName = $data['Contact1LastName'];
 	$paidStatus = $_POST['paidStatus'];
 	
-	$edit = mysqli_query($dbc,"update invoice set paidStatus='$paidStatus' where invoiceID = $id;");
+	$edit = mysqli_query($dbc,"update invoice set paidStatus='$paidStatus' where familyID ='$id';");
 	
 	
     if($edit)
@@ -60,7 +60,7 @@ if(isset($_POST['update'])) // when click on Update button
   <p>
 	<p><b>Conatct Last Name : <?php echo $data['contact1FirstName'] ?> </b></p>
 	<p><b>Contact First Name : <?php echo $data['Contact1LastName'] ?> </b></p>
-	<p><b>Amount : <?php echo $data['amount'] ?> </b></p>
+	<p><b>Amount : $ <?php echo $data['amount'] ?> </b></p>
 	<select name="paidStatus">
         <option value="False">Unpaid</option>
         <option value="True">Paid</option>

@@ -21,7 +21,8 @@ if(isset($_POST['update'])) // when click on Update button
 	
 	if ($teamID <> 'Null')
 	{
-		$edit = mysqli_query($dbc,"update coach_has_team set teamID='$teamID' where coachID = $id;");
+		$edit = mysqli_query($dbc,"insert into coach_has_team values ('$id','$teamID');");
+	
 	}
 	else
 	{
@@ -59,7 +60,6 @@ if(isset($_POST['update'])) // when click on Update button
 					while ($row = $result->fetch_assoc()) {
                     echo "<option value=\"$row[teamID]\">$row[team]</option>";
                 }
-					echo "<option value=\"Null\">UnAssign</option>";
                 echo "</select>";
 			}
 			else {
