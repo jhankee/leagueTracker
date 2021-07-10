@@ -4,22 +4,9 @@
 // It should be saved outside of the main web documents folder
 // and imported when needed
 
-/*
-Command that gives the database user the least amount of power
-as is needed.
-GRANT INSERT, SELECT, DELETE, UPDATE ON leagueTracker.* 
-TO 'studentweb'@'localhost' 
-IDENTIFIED BY 'password1234';
-SELECT : Select rows in tables
-INSERT : Insert new rows into tables
-UPDATE : Change data in rows
-DELETE : Delete existing rows (Remove privilege if not required)
-*/
-
 // Defined as constants so that they can't be changed
 DEFINE ('DB_USER', 'leagueAdmin');
 DEFINE ('DB_PASSWORD', 'password');
-//DEFINE ('DB_HOST', 'localhost');
 DEFINE ('DB_HOST', 'sju-csc621-db.cwezplxtfcp4.us-east-2.rds.amazonaws.com');
 DEFINE ('DB_NAME', 'leaguetracker');
 

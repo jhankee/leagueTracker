@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Full Roster Listing</title>
+  <title>Full Coaching List</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
 
 <div style="text-align:center">
-  <h2 style="text-align:center">Full Roster Listing</h2>
+  <h2 style="text-align:center">Full Coaching List</h2>
 
   <h3><a href="http://localhost/leagueTracker/index.html">Click Here to Return to Home Page</a></h3>
 </br>

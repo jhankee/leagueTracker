@@ -54,7 +54,7 @@ if(isset($_POST['update'])) // when click on Update button
                 <h3><b>Invoice Maintanence</b></h3>
 </div>
 
-<!-- <h3>Invioce Maintanence</h3> -->
+<!-- <h3>Invoice Maintanence</h3> -->
 
 <form method="POST">
   <p>
