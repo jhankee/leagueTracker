@@ -12,6 +12,8 @@
 
 <h3><a href="http://localhost/leagueTracker/index.html">Click Here to Return to Home Page</a></h3>
   </br>
+  <h3><a href="http://localhost/leagueTracker/coaches/add_coachInfo2.php">Click Here to Add New Coach</a></h3>
+  </br>
 
 <table class="table table-dark" border="2">
   <tr>
