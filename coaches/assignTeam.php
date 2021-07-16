@@ -15,8 +15,8 @@ $data = mysqli_fetch_array($qry); // fetch data
 
 if(isset($_POST['update'])) // when click on Update button
 {
-    $playerLastName = $data['playerLastName'];
-	$playerFirstName = $data['playerFirstName'];
+    $coachLastName = $data['coachLastName'];
+	$coachFirstName = $data['coachFirstName'];
 	$teamID = $_POST['newTeam'];
 	
 	if ($teamID <> 'Null')
